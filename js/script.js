@@ -28,7 +28,7 @@ for (let i = 0; i < 5; i++) {
 console.log(arr5);
 
 // 6task
-let arr6 = [];
+const arr6 = [];
 for (let i = 1; i <= 10; i++) {
     let str6 = '';
     for (let j = 0; j < i; j++){
@@ -37,7 +37,57 @@ for (let i = 1; i <= 10; i++) {
 	arr6.push(str6);
 }
 console.log(arr6);
+// 7task
+function arrayFill(item, count) {
+    let arr7 = [];
+    for (let i = 0; i < count; i++){
+        arr7.push(item);
 
-
-
-
+    }
+    return arr7;
+}
+console.log(arrayFill('x', 5));
+// 8task
+const arr8 = [3, 2, 3, 3, 4, 3];
+function countArr(array) {
+    let sum = 0;
+    for (let i = 0; i <= array.length-1; i++){
+        sum += array[i];
+        if (sum > 10) {
+            return i + 1;
+        }
+    }
+}
+console.log(countArr(arr8));
+//9
+const arr9 = [1, 2, 3, 4, 5];
+function reverseArr(array) {
+    let arr9Rev = [];
+    for (let i = array.length-1; i >= 0; i--){
+        arr9Rev.push(array[i]);
+    }
+    return arr9Rev;
+}
+console.log(reverseArr(arr9));
+//10
+const arr10 = [[1, 2, 3], [4, 5], [6]];
+function sumArray(array) {
+    let sum = 0;
+    array = array.flat();
+    for (let i = 0; i < array.length; i++){
+        sum += array[i];
+    }
+    return sum;
+}
+console.log(sumArray(arr10));
+//11
+const arr11 = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]];
+function sumArr(array) {
+    let sum = 0;
+    array = array.flat(Infinity);
+    for (let i = 0; i < array.length; i++){
+        sum += array[i];
+    }
+    return sum;
+}
+console.log(sumArr(arr11));
